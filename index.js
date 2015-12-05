@@ -21,6 +21,16 @@ var SteamcommunityMobileConfirmations = function (options)
 	}).bind(this));
 };
 
+SteamcommunityMobileConfirmations.prototype.SetupWebCookie = function (webCookie)
+{
+	webCookie.forEach((function(name)
+	{
+		((function (cookie)
+		{
+			this._j.setCookie(Request.cookie(cookie), 'https://steamcommunity.com');
+		}).bind(this))(name);
+	}).bind(this));
+};
 
 SteamcommunityMobileConfirmations.prototype.FetchConfirmations = function (callback)
 {
