@@ -32,6 +32,11 @@ SteamcommunityMobileConfirmations.prototype.SetupWebCookie = function (webCookie
 	}).bind(this));
 };
 
+SteamcommunityMobileConfirmations.prototype.SetupSteamId = function (steamId)
+{
+	this.steamid = steamId;
+};
+
 SteamcommunityMobileConfirmations.prototype.FetchConfirmations = function (callback)
 {
 	this._request.get({
